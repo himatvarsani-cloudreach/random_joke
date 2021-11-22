@@ -21,7 +21,17 @@ jokes_db = {
 # @ is a decorator - way to wrap a function and modify it's behavior
 @app.route("/")
 def index():
-    return render_template ("index.html") 
+    #for j in jokes_db:
+    #print (random.choice(jokes_db.values))
+    #html_response = "<p>"
+    #for j in jokes_db:
+        #print(jokes_db[j])
+     #   html_response += jokes_db[j]["joke"]
+     #   html_response += "</p>"
+        #return render_template ("index.html", jokes=jokes_db[random.choice(j)] ["joke"])
+    j = random.choice(list(jokes_db.keys()))
+    return render_template ("index.html", jokes=jokes_db[j]["joke"]) 
+
 
 
 if __name__ == "__main__":

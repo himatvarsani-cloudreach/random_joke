@@ -5,19 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Jokes Web Services</title>
+    <script src="/static/js/jquery.min.js"></script>
     <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <h1> Random Jokes</h1>
     <h2>Would you like you like to hear a joke? </h2>
     <input type="button" onclick="myFunction()" value="Click Here to tell me a joke">
-
-
-<p id="joke"></p>
+    <p id="joke"></p>
 
 <script>
 function myFunction() {
-  document.getElementById("joke").innerHTML = "What does Thor call his underpants? Thunderpants!";
+  document.getElementById("joke").innerHTML = "<p>{{jokes }}</p>";
 }
 </script>
 </body>
